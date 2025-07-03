@@ -6,10 +6,11 @@
     - functions
     - arrow functions
     - objects
-    - any variable that is set to a value Ex: `const myVariableName = 'value'`
+    - any variable that is set to a value
       - strings
       - arrays
       - objects
+      - Example: `const myVariableName = 'value'`
       
   ***Example:***
   ```javascript
@@ -73,13 +74,14 @@
   if(myNewBoolean){} // because the statement results in 'true', the codeblock {} will run.
 
 
-    myNewBoolean = ( // you can re-assign myNewBoolean because it was declared with the 'let' keyword
+  myNewBoolean = ( // you can re-assign myNewBoolean because it was declared with the 'let' keyword
     true &&
     false &&
     (0 > 1)
   )
   /*
-  If only one statement from above results in false, the entire result will be false. This is how the && (AND) keyword works
+  - If only one statement from above results in false, the entire result will be false.
+  - This is how the && (AND) keyword works
   */
   
   if(myNewBoolean){} // because the statement results in 'false', the codeblock {} will NOT run.
@@ -132,7 +134,7 @@ A `ternary` statment has the same structure as an `if()` statement
 // To write a ternary statement, begin by writing your standard if()
 if( true ) { console.log('Option 1: true') } else { console.log('Option 2: false') };
 
-// Next, write your ternary statement
+// Next, write your ternary statement by extracting the corresponding parts from your if()
 ( true ) ? console.log('Option 1: true') : console.log('Option 2: false')
 ```
 ### `switch( case )` statements
