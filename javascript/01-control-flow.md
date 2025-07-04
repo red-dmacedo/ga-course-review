@@ -39,7 +39,7 @@ The above statment says the following:
     - `===` - **Strict equality**: 
     - `==` - **Loose equality**
     - `<` - **Less than**
-    - `<` - **Greater than**
+    - `>` - **Greater than**
     - `<=` - **Less than or equal to**
     - `>=` - **Greater than or equal to**
     - `!` - Invert `true` or `false` statements
