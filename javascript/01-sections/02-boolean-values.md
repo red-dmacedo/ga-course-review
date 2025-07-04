@@ -33,10 +33,14 @@ let myNewBoolean = (
   true ||
   false ||
   (0 > 1)
-) // <== proof that you can combine many conditional statements into one and return a single true/false value.
+) /*
+  <== proof that you can combine many conditional statements into one and
+  return a single true/false value.
+*/
 
 /*
-If only one statement from myNewBoolean is true, then the whole statement returns as true. This is how the || (OR) keyword works.
+  If only one statement from myNewBoolean is true, then
+  the whole statement returns as true. This is how the || (OR) keyword works.
 */
 if(myNewBoolean){} // because the statement results in 'true', the codeblock {} will run.
 
