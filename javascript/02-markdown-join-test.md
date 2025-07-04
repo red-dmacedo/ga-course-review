@@ -1,1 +1,1 @@
-{{sections/01-control-flow.md}}
+![[sections/01-control-flow.md]]
