@@ -14,7 +14,8 @@
 - `Array`
   - An `array` is a data `type` that stores other data `types` in a list-like format.
   - An `array` can store *any* other data `type`
-  - An `array` like a number line, start its `index` at `0`
+  - Much like a number line, an `array` has a starting `index` of `0`
+    - 0-1-2-3-4
   - All `arrays` in javascript are enclosed by square brackets `[]`
   - Items within an `array` are separated by a comma `,`
     - Spaces between values are optional, but help with readability
@@ -31,41 +32,59 @@
       - Refers to `sub-arrays` within your `array`
       - You can continue to `index` into these `sub-arrays` by adding more square brackets `[]`
       - Example: `const myArray = [ [ [9, 10], 8, 7 ], "item X" ]`  =>
-        - `myArray[0][0][0] === 9`
+        - `myArray[0][0][0] === 9` - Since there are `3` `arrays` between `9` and the outside of the `array`, you must `index` into all `3` to extract `9`
         - `myArray[0][1] === 8`
         - `myArray[1] === "item X"`
         - `myArray[0][0][1] === 10`
   - In relation to the table below...
+    - | idx   | 0           |
+      | :---: | :---------: |
+      | 0     | "item 1"    |
+      | 1     | "item 2"    |
+      | 2     | "item 3"    |
+      | 3     | "item 4"    |
+      | 4     | "item 5"    |
     - `"item 3"` is at index `[2]`
     - To call upon `"item 3"`, you must state the `array`'s name, and then state the index in square brackets next to the `array` name.
     - Example of calling `"item 3"`: `Array[2]`
 
+  - ***Example***: Using the above table
+    ```javascript
+    /*
+      - Arrays are generally declared as constants to
+        prevent them from shrinking or growing.
 
-| idx   | 0           |
-| :---: | :---------: |
-| 0     | "item 1"    |
-| 1     | "item 2"    |
-| 2     | "item 3"    |
-| 3     | "item 4"    |
-| 4     | "item 5"    |
+      - Although the size of the array cannot change,
+        when declared as const, the items within each
+        index can be modified to your whim.
+      - This assumes that the data type you are trying
+        to modify can be modified
+    */
+    const myArrayName = [ "item 1", "item 2", "item 3", "item 4", "item 5" ]
+    console.log( myArrayName[2] ) // "item 3"
 
-***Example***: Using the above table
-```javascript
-/*
-  - Arrays are generally declared as constants to
-    prevent them from shrinking or growing.
+    ```
 
-  - Although the size of the array cannot change,
-    when declared as const, the items within each
-    index can be modified to your whim.
-  - This assumes that the data type you are trying
-    to modify can be modified
-*/
-const myArrayName = [ "item 1", "item 2", "item 3", "item 4", "item 5" ]
-console.log( myArrayName[2] ) // "item 3"
-
-```
-
+  - Negative `Index`
+    - Note: `javascript` only supports `negative indices` when using the `.at()` method of an `array`
+      - `myArray.at(-1)`
+      - Don't let this discourage your use of `negative indices` as they are more widely supported in other languages
+    - Since an `array` starts at `0` and ends at `Array.length`, you can reverse the order by using negative numbers as your `index`
+    - Consider the following array `const myArray = [6,5,4,3,2]`
+      - This table depicts the `value` of the array at each positive and negative `index` as indicated by the `idx` `column`
+      - | idx | myArray |
+        | :---| :---:   |
+        | -4  | 5       |
+        | -3  | 4       |
+        | -2  | 3       |
+        | -1  | 2       |
+        | 0   | 6       |
+        | 1   | 5       |
+        | 2   | 4       |
+        | 3   | 3       |
+        | 4   | 2       |
+      - `myArray.at(-2) === 3`
+      - `6` in `myArray` will ***never*** have a `negative index`
 # Multi-dimensional Arrays
 
 | idx   | 0           | 1           |
