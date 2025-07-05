@@ -23,12 +23,25 @@
   - An `index` refers to the numerical position of the `item` you are selecting within an array
   - The `indices` of an `array` will always be `1` less than the `length` of the `array`
     - This is why a `for-i` loop ends at `Array.length - 1`
+  - You can `index` infinitely into an `array` until there is no `item` at the index you have called
+  - The ***order*** of `indices` of an `array` call:
+    - first `[]` - `row index`
+    - second `[]` - `column index`
+    - third `[]` - only usable if the `item` at `[row][column]` is an array
+      - Refers to `sub-arrays` within your `array`
+      - You can continue to `index` into these `sub-arrays` by adding more square brackets `[]`
+      - Example: `const myArray = [ [ [9, 10], 8, 7 ], "item X" ]`  =>
+        - `myArray[0][0][0] === 9`
+        - `myArray[0][1] === 8`
+        - `myArray[1] === "item X"`
+        - `myArray[0][0][1] === 10`
   - In relation to the table below...
     - `"item 3"` is at index `[2]`
     - To call upon `"item 3"`, you must state the `array`'s name, and then state the index in square brackets next to the `array` name.
     - Example of calling `"item 3"`: `Array[2]`
 
-|       | 0           |
+
+| idx   | 0           |
 | :---: | :---------: |
 | 0     | "item 1"    |
 | 1     | "item 2"    |
@@ -55,7 +68,7 @@ console.log( myArrayName[2] ) // "item 3"
 
 # Multi-dimensional Arrays
 
-|       | 0           | 1           |
+| idx   | 0           | 1           |
 | :---: | :---------: | :---------: |
 | 0     | "item 1"    | "cat"       |
 | 1     | "item 2"    | "dog"       |
@@ -63,7 +76,7 @@ console.log( myArrayName[2] ) // "item 3"
 | 3     | "item 4"    | "horse"     |
 | 4     | "item 5"    | "spider"    |
 
-|       | 0           | 1           | 2              | 3                                          |
+| idx   | 0           | 1           | 2              | 3                                          |
 | :---: | :---------: | :---------: | :------------: | :-----------------------------------------:|
 | 0     | "item 1"    | "cat"       | [ 0, 1, 2 ]    | {name: "Bob"; age: 30; height: "5.6 in."}  |
 | 1     | "item 2"    | "dog"       | [ 3, 4, 5 ]    | {name: "Meg"; age: 24; height: "5.8 in."}  |
