@@ -38,7 +38,11 @@ function writeConsoleLog(){
 
 writeConsoleLog() // Call the function
 writeConsoleLog() // Call the function again
-writeConsoleLog() // example of re-usability
+writeConsoleLog()
+/*
+  - by defining a function, it can be called
+    as many times as your program requires
+*/
 ```
 ***Example 2***
 ```javascript
@@ -69,9 +73,9 @@ console.log( 'addOne_2:', addOne_2(myNum) ) // 2 => 3
 ## Parameters vs. Arguments
 Parameters and arguments are *nearly* the same.
 - **Parameter**
+  - defined within parentheses `()` after declaring a function
   - A **parameter** is what the function uses to *reference* the **argument** passed by the function call
   - Consider the **parameter** as a simple re-naming of the **argument**
-  - defined within parentheses `()` after declaring a function
 - **Argument**
   - Listed after a function call within parentheses `()`
 
@@ -81,7 +85,7 @@ Parameters and arguments are *nearly* the same.
   - a parameter is what the function uses to reference
     the argument passed by the function call
 
-  - argument is re-named to parameter after the function is called
+  - the argument is re-named to parameter after the function is called
 */
 function logParameter(parameter){ // <== argument is now parameter
   console.log(parameter)
