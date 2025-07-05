@@ -42,11 +42,11 @@
   - Arrays are generally declared as constants to
     prevent them from shrinking or growing.
 
-  - Although the size of the array cannot change
-    (when declared as const), the items within each
-    index, can be modified to your whim.
-    (assuming the data type you are trying to modify
-    can be modified)
+  - Although the size of the array cannot change,
+    when declared as const, the items within each
+    index can be modified to your whim.
+  - This assumes that the data type you are trying
+    to modify can be modified
 */
 const myArrayName = [ "item 1", "item 2", "item 3", "item 4", "item 5" ]
 console.log( myArrayName[2] ) // "item 3"
