@@ -86,19 +86,52 @@
       - `myArray.at(-2) === 3`
       - `6` in `myArray` will ***never*** have a `negative index`
 # Multi-dimensional Arrays
+## ***Example 1***
+- **Table**:
+  | idx   | 0           | 1           |
+  | :---: | :---------: | :---------: |
+  | 0     | "item 1"    | "cat"       |
+  | 1     | "item 2"    | "dog"       |
+  | 2     | "item 3"    | "bird"      |
+  | 3     | "item 4"    | "horse"     |
+  | 4     | "item 5"    | "spider"    |
+- **Array**:
+  ```js
+  myArray = [
+    ["item 1", "cat"],
+    ["item 2", "dog"],
+    ["item 3", "bird"],
+    ["item 4", "horse"],
+    ["item 5", "spider"]
+  ]
 
-| idx   | 0           | 1           |
-| :---: | :---------: | :---------: |
-| 0     | "item 1"    | "cat"       |
-| 1     | "item 2"    | "dog"       |
-| 2     | "item 3"    | "bird"      |
-| 3     | "item 4"    | "horse"     |
-| 4     | "item 5"    | "spider"    |
+  console.log(myArray[0][1] === 'cat') // true | Row 0, column 1
+  console.log(myArray[3][0] === 'item 4') // true | Row 3, column 0
+  console.log(myArray.at(4).at(1) === 'spider') // true | Row 4, column 1
+  ```
+## ***Example 2***
+- **Table**:
+  | idx   | 0           | 1           | 2              | 3                                          |
+  | :---: | :---------: | :---------: | :------------: | :-----------------------------------------:|
+  | 0     | "item 1"    | "cat"       | [ 0, 1, 2 ]    | {name: "Bob", age: 30, height: "5.6 in."}  |
+  | 1     | "item 2"    | "dog"       | [ 3, 4, 5 ]    | {name: "Meg", age: 24, height: "5.8 in."}  |
+  | 2     | "item 3"    | "bird"      | [ 6, 7, 8 ]    | {name: "Sam", age: 63, height: "5.63 in."} |
+  | 3     | "item 4"    | "horse"     | [ 9, 10, 11 ]  | {name: "Tom", age: 41, height: "5.6 in."}  |
+  | 4     | "item 5"    | "spider"    | [ 12, 13, 14 ] | {name: "Lee", age: 15, height: "5.2 in."}  |
+- **Array**:
+  ```js
+  myArray = [
+    ["item 1", "cat", [0,1,2], {name: "Bob", age: 30, height: "5.6 in."}],
+    ["item 2", "dog", [3,4,5], {name: "Meg", age: 24, height: "5.8 in."}],
+    ["item 3", "bird", [6,7,8], {name: "Sam", age: 63, height: "5.63 in."}],
+    ["item 4", "horse", [9,10,11], {name: "Tom", age: 41, height: "5.6 in."}],
+    ["item 5", "spider", [12,13,14], {name: "Lee", age: 15, height: "5.2 in."}]
+  ]
 
-| idx   | 0           | 1           | 2              | 3                                          |
-| :---: | :---------: | :---------: | :------------: | :-----------------------------------------:|
-| 0     | "item 1"    | "cat"       | [ 0, 1, 2 ]    | {name: "Bob", age: 30, height: "5.6 in."}  |
-| 1     | "item 2"    | "dog"       | [ 3, 4, 5 ]    | {name: "Meg", age: 24, height: "5.8 in."}  |
-| 2     | "item 3"    | "bird"      | [ 6, 7, 8 ]    | {name: "Sam", age: 63, height: "5.63 in."} |
-| 3     | "item 4"    | "horse"     | [ 9, 10, 11 ]  | {name: "Tom", age: 41, height: "5.6 in."}  |
-| 4     | "item 5"    | "spider"    | [ 12, 13, 14 ] | {name: "Lee", age: 15, height: "5.2 in."}  |
+  console.log(myArray[1][3].name) // Meg => row 1, column 3, property: name
+  console.log(myArray[0][3].age) // 30 => row 0, column 3, property: age
+  console.log(myArray[3][2][0]) // 9 => row 3, column 2, sub-row 0
+
+  // return the whole array at index 0
+  console.log(myArray[0]) // ["item 1", "cat", [0,1,2], {name: "Bob", age: 30, height: "5.6 in."}]
+  ```
