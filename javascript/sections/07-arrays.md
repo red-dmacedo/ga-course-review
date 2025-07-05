@@ -1,11 +1,5 @@
 # Arrays
-
-<center>
-
 ## Keywords
-
-</center>
-
 - Data **`Type`**
   - A data `type` is a `class` of `object` that has a *predefined* set of methods and/or `properties`
   - Different data `types` include, but are not limited to:
@@ -18,8 +12,6 @@
     - `typeof( new Array ) === "Array"` <= this line creates a new Array object, gets the `type` of the object, and checks to see if the value is `"Array"`
     - `typeof( "my string" ) === "String"`
 
-<center>
-
 |       | 0           |
 | :---: | :---------: |
 | 0     | "item 1"    |
@@ -28,16 +20,7 @@
 | 3     | "item 4"    |
 | 4     | "item 5"    |
 
-</center>
-
-<center>
-
 # Multi-dimensional Arrays
-
-</center>
-
-
-<center>
 
 |       | 0           | 1           |
 | :---: | :---------: | :---------: |
@@ -47,11 +30,6 @@
 | 3     | "item 4"    | "horse"     |
 | 4     | "item 5"    | "spider"    |
 
-</center>
-
-
-<center>
-
 |       | 0           | 1           | 2           |
 | :---: | :---------: | :---------: | :---------: |
 | 0     | "item 1"    | "cat"       | [ a, b, c ] |
@@ -59,5 +37,3 @@
 | 2     | "item 3"    | "bird"      | [ g, h, i ] |
 | 3     | "item 4"    | "horse"     | [ j, k, l ] |
 | 4     | "item 5"    | "spider"    | [ m, n, o ] |
-
-</center>
